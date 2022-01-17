@@ -1,0 +1,258 @@
+<!doctype html><html lang=zh-cn><head>
+<meta charset=utf-8>
+<title>唐叶心事重</title>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name=description content="this is meta description">
+<meta name=author content="唐叶心事重">
+<meta name=generator content="Hugo 0.92.0">
+<link rel=stylesheet href=https://jiangkuanc.github.io/plugins/bootstrap/bootstrap.min.css>
+<link rel=stylesheet href=https://jiangkuanc.github.io/plugins/slick/slick.css>
+<link rel=stylesheet href=https://jiangkuanc.github.io/plugins/themify-icons/themify-icons.css>
+<link rel=stylesheet href=https://jiangkuanc.github.io/plugins/venobox/venobox.css>
+<link rel=stylesheet href=https://jiangkuanc.github.io/scss/style.min.css media=screen>
+<link rel="shortcut icon" href=https://jiangkuanc.github.io/images/favicon.png type=image/x-icon>
+<link rel=icon href=https://jiangkuanc.github.io/images/favicon.png type=image/x-icon>
+</head><body>
+<div class=preloader>
+</div>
+<header class=navigation>
+<div class=container>
+<nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
+<button class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation>
+<i class="ti-menu h3"></i>
+</button>
+<div class="collapse navbar-collapse text-center" id=navigation>
+<div class=desktop-view>
+<ul class="navbar-nav mr-auto">
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-facebook></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-twitter-alt></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-instagram></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-github></i></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=#><i class=ti-linkedin></i></a>
+</li>
+</ul>
+</div>
+<ul class="navbar-nav ml-auto">
+<li class=nav-item>
+<a class=nav-link href=https://jiangkuanc.github.io> Home </a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://jiangkuanc.github.io/about/about>About</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://jiangkuanc.github.io/blog>Post</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://jiangkuanc.github.io/contact>Contact</a>
+</li>
+</ul>
+<div class="search px-4">
+<button id=searchOpen class=search-btn><i class=ti-search></i></button>
+<div class=search-wrapper>
+<form action=https://jiangkuanc.github.io/search class=h-100>
+<input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter...">
+</form>
+<button id=searchClose class=search-close><i class="ti-close text-dark"></i></button>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<section class=section-sm>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 mx-auto">
+<a href=/categories/channel class=text-primary>Channel</a>
+<h2>Channle 的使用</h2>
+<div class="mb-3 post-meta">
+<span>唐叶心事重</span>
+<span class="border-bottom border-primary px-2 mx-1"></span>
+<span>2020-05-14 22:00:00</span>
+</div>
+<img src=https://jiangkuanc.github.io/images/featured-post/post-1.jpg class="img-fluid w-100 mb-4" alt="Channle 的使用">
+<div class="content mb-5">
+<h2 id=channel-介绍>channel 介绍</h2>
+<p>​ goroutine是Go语言程序的并发体的话，那么channel则是它们之间的通信机制。一个channel是一个通信机制，它可以让一个goroutine通过它给另一个goroutine发送值信息。每个channel都有一个特殊的类型，也就是channels可发送数据的类型。</p>
+<h2 id=channel-使用场景>channel 使用场景</h2>
+<ul>
+<li>消息传递、消息过滤</li>
+<li>信号广播</li>
+<li>事件订阅与广播</li>
+<li>请求、响应转发</li>
+<li>任务分发</li>
+<li>结果汇总</li>
+<li>并发控制</li>
+<li>同步与异步</li>
+</ul>
+<hr>
+<h2 id=channel-状态>channel 状态</h2>
+<ul>
+<li>nil，未初始化的状态，只进行了声明，或者手动赋值为<code>nil</code></li>
+<li>active，正常的channel，可读或者可写</li>
+<li>closed，已关闭，<strong>千万不要误认为关闭channel后，channel的值是nil</strong></li>
+</ul>
+<hr>
+<h2 id=channel-操作>channel 操作</h2>
+<ul>
+<li>读</li>
+<li>写</li>
+<li>关闭</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style=text-align:center>操作</th>
+<th style=text-align:center>nil的channel</th>
+<th style=text-align:center>正常channel</th>
+<th style=text-align:center>已关闭channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>&lt;- ch</td>
+<td style=text-align:center>阻塞</td>
+<td style=text-align:center>成功或阻塞</td>
+<td style=text-align:center>读到零值</td>
+</tr>
+<tr>
+<td style=text-align:center>ch &lt;-</td>
+<td style=text-align:center>阻塞</td>
+<td style=text-align:center>成功或阻塞</td>
+<td style=text-align:center>panic</td>
+</tr>
+<tr>
+<td style=text-align:center>close(ch)</td>
+<td style=text-align:center>panic</td>
+<td style=text-align:center>成功</td>
+<td style=text-align:center>panic</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>font</span> <span style=color:#a6e22e>style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;color:red&#34;</span>&gt;对于nil通道的情况，也并非完全遵循上表，**有1个特殊场景**：当`nil`的通道在`select`的某个`case`中时，这个case会阻塞，但不会造成死锁。&lt;/<span style=color:#f92672>font</span>&gt;
+</code></pre></div><hr>
+<hr>
+<h2 id=阻塞场景>阻塞场景</h2>
+<p><strong>无论是有缓存通道、无缓冲通道都存在阻塞的情况</strong>。阻塞场景共4个，有缓存和无缓冲各2个。</p>
+<p><strong>无缓冲通道</strong>的特点是，发送的数据需要被读取后，发送才会完成，它<strong>阻塞场景</strong>：</p>
+<ul>
+<li>通道中无数据，但执行读通道。</li>
+<li>通道中无数据，向通道写数据，但无协程读取。</li>
+</ul>
+<p><strong>有缓存通道</strong>的特点是，有缓存时可以向通道中写入数据后直接返回，缓存中有数据时可以从通道中读到数据直接返回，这时有缓存通道是不会阻塞的，它<strong>阻塞场景是</strong></p>
+<ul>
+<li>通道的缓存无数据，但执行读通道。</li>
+<li>通道的缓存已经占满，向通道写数据，但无协程读。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class=section-sm>
+<div class=container>
+<div class=row>
+<div class="col-lg-8 mx-auto text-center">
+<h2>Join Our Newsletter</h2>
+<p class="text-light px-md-5 py-4 border-left border-right border-primary">
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero</p>
+<form action=# class="row justify-content-center">
+<div class="input-group col-md-8">
+<input type=text class=form-control placeholder="Your Email Address">
+<div class=input-group-append>
+<button class="input-group-text btn btn-primary">Subscribe</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class=container>
+<div class=row>
+<div class="col-12 text-center mb-5">
+<a href><img src alt></a>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Contact Me</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=tel:0124857985320><i class="ti-mobile mr-3 text-primary"></i>0124857985320</a></li>
+<li class=mb-3><i class="ti-location-pin mr-3 text-primary"></i>BeiJing,China</li>
+<li class=mb-3><a class=text-dark href=mailto:jiangkuanc@163.com><i class="ti-email mr-3 text-primary"></i>jiangkuanc@163.com</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Social Contacts</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=#>facebook</a></li>
+<li class=mb-3><a class=text-dark href=#>twitter</a></li>
+<li class=mb-3><a class=text-dark href=#>instagram</a></li>
+<li class=mb-3><a class=text-dark href=#>github</a></li>
+<li class=mb-3><a class=text-dark href=#>linkedin</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Categories</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=/categories/android-and-gmaing>Android and gmaing</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/channel>Channel</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/git>Git</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/go-language>Go language</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/html>HTML</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/html-css>HTML css</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/net>Net</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/programming-language>Programming language</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/python>Python</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/tools>Tools</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/tripartite>Tripartite</a>
+</li>
+<li class=mb-3><a class=text-dark href=/categories/web-design>Web design</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-6 mb-5">
+<h6 class=mb-4>Quick Links</h6>
+<ul class=list-unstyled>
+<li class=mb-3><a class=text-dark href=https://jiangkuanc.github.io/about/about>About</a></li>
+<li class=mb-3><a class=text-dark href=https://jiangkuanc.github.io/blog>Post</a></li>
+<li class=mb-3><a class=text-dark href=https://jiangkuanc.github.io/contact>Contact</a></li>
+</ul>
+</div>
+<div class="col-12 border-top py-4 text-center">
+</div>
+</div>
+</div>
+</footer>
+<script>var indexURL="https://jiangkuanc.github.io/index.json"</script>
+<script src=https://jiangkuanc.github.io/plugins/jQuery/jquery.min.js></script>
+<script src=https://jiangkuanc.github.io/plugins/bootstrap/bootstrap.min.js></script>
+<script src=https://jiangkuanc.github.io/plugins/slick/slick.min.js></script>
+<script src=https://jiangkuanc.github.io/plugins/venobox/venobox.min.js></script>
+<script src=https://jiangkuanc.github.io/plugins/search/fuse.min.js></script>
+<script src=https://jiangkuanc.github.io/plugins/search/mark.js></script>
+<script src=https://jiangkuanc.github.io/plugins/search/search.js></script>
+<script src=https://jiangkuanc.github.io/js/script.min.js></script>
+<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','Your ID','auto'),ga('send','pageview')</script>
+</body>
+</html>
