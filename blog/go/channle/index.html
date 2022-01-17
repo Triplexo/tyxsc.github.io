@@ -138,8 +138,7 @@
 </tr>
 </tbody>
 </table>
-<p>对于nil通道的情况，也并非完全遵循上表，有1个特殊场景：当<code>nil</code>的通道在<code>select</code>的某个<code>case</code>中时，这个case会阻塞，但不会造成死锁。</p>
-<p>asadsad</p>
+<p>对于nil通道的情况，也并非完全遵循上表，有1个特殊场景：当 <code>nil</code> 的通道在 <code>select</code> 的某个 <code>case</code> 中时，这个case会阻塞，但不会造成死锁。</p>
 <hr>
 <h2 id=阻塞场景>阻塞场景</h2>
 <p><strong>无论是有缓存通道、无缓冲通道都存在阻塞的情况</strong>。阻塞场景共4个，有缓存和无缓冲各2个。</p>
