@@ -138,9 +138,8 @@
 </tr>
 </tbody>
 </table>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>font</span> <span style=color:#a6e22e>style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;color:red&#34;</span>&gt;对于nil通道的情况，也并非完全遵循上表，**有1个特殊场景**：当`nil`的通道在`select`的某个`case`中时，这个case会阻塞，但不会造成死锁。&lt;/<span style=color:#f92672>font</span>&gt;
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>对于nil通道的情况，也并非完全遵循上表，**有1个特殊场景**：当`nil`的通道在`select`的某个`case`中时，这个case会阻塞，但不会造成死锁。
 </code></pre></div><hr>
-<hr>
 <h2 id=阻塞场景>阻塞场景</h2>
 <p><strong>无论是有缓存通道、无缓冲通道都存在阻塞的情况</strong>。阻塞场景共4个，有缓存和无缓冲各2个。</p>
 <p><strong>无缓冲通道</strong>的特点是，发送的数据需要被读取后，发送才会完成，它<strong>阻塞场景</strong>：</p>
