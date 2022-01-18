@@ -2,7 +2,7 @@
 <meta charset=utf-8>
 <title>唐叶心事重</title>
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta name=description content="this is meta description">
+<meta name=description content="This is meta description">
 <meta name=author content="唐叶心事重">
 <meta name=generator content="Hugo 0.92.0">
 <link rel=stylesheet href=https://jiangkuanc.github.io/plugins/bootstrap/bootstrap.min.css>
@@ -71,59 +71,34 @@
 <section class=section-sm>
 <div class=container>
 <div class=row>
-<div class="col-lg-8 mx-auto text-center">
-<img src=https://jiangkuanc.github.io/images/author.jpg alt class="img-fluid d-block mx-auto rounded-circle mb-4">
-<h4 class=widget-title>About Me</h4>
-<div class=content>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,</p>
-<p>consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
-<p>nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</p>
+<div class="col-lg-8 mx-auto">
+<h2></h2>
+<div class="mb-3 post-meta">
+<span>唐叶心事重</span>
+<span class="border-bottom border-primary px-2 mx-1"></span>
+<span>0001-01-01 00:00:00</span>
 </div>
+<div class="content mb-5">
+<h1 id=本地环境搭建>本地环境搭建</h1>
+<h2 id=minikube>minikube</h2>
+<ol>
+<li><a href=http://soulmz.me/2020/04/29/minikube-installed-for-mac/>安装教程</a></li>
+</ol>
+<p>如下命令将自动使用阿里云服务来支持minikube的环境配置</p>
+<pre tabindex=0><code>minikube start --image-mirror-country='cn'
+</code></pre><p>minikube 提供了非常多的配置参数，</p>
+<p>常用配置参数如下</p>
+<ul>
+<li><code>--driver=***</code> 从1.5.0版本开始，Minikube缺省使用系统优选的驱动来创建Kubernetes本地环境，比如您已经安装过Docker环境，minikube 将使用 <code>docker</code> 驱动</li>
+<li><code>--cpus=2</code>: 为minikube虚拟机分配CPU核数</li>
+<li><code>--memory=2048mb</code>: 为minikube虚拟机分配内存数</li>
+<li><code>--registry-mirror=***</code> 为了提升拉取Docker Hub镜像的稳定性，可以为 Docker daemon 配置镜像加速，参考<a href=https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors>阿里云镜像服务</a></li>
+<li><code>--kubernetes-version=***</code>: minikube 虚拟机将使用的 kubernetes 版本</li>
+</ul>
+<p>安装命令：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>minikube start --image-mirror-country<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;cn&#39;</span> --registry-mirror<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;https://9sznap3j.mirror.aliyuncs.com&#39;</span>
+</code></pre></div>
 </div>
-</div>
-</div>
-</section>
-<section>
-<div class="container-fluid px-0">
-<div class=text-center>
-<h4 class=widget-title>My Gallery</h4>
-</div>
-<div class="row no-gutters">
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/1.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/1.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/2.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/2.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/3.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/3.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/4.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/4.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/5.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/5.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/6.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/6.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/7.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/7.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/8.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/8.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/9.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/9.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/10.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/10.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/11.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/11.jpg alt></a>
-</div>
-<div class="col-lg-2 col-md-3 col-sm-4 col-6">
-<a href=https://jiangkuanc.github.io/images/gallery/12.jpg class=venobox data-gall=gallery><img class="img-fluid w-100" src=https://jiangkuanc.github.io/images/gallery/12.jpg alt></a>
 </div>
 </div>
 </div>
