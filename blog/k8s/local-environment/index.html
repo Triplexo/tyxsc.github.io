@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta name=description content="This is meta description">
 <meta name=author content="唐叶心事重">
-<meta name=generator content="Hugo 0.92.0">
+<meta name=generator content="Hugo 0.92.1">
 <link rel=stylesheet href=https://jiangkuanc.github.io/plugins/bootstrap/bootstrap.min.css>
 <link rel=stylesheet href=https://jiangkuanc.github.io/plugins/slick/slick.css>
 <link rel=stylesheet href=https://jiangkuanc.github.io/plugins/themify-icons/themify-icons.css>
@@ -97,7 +97,70 @@
 </ul>
 <p>安装命令：</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>minikube start --image-mirror-country<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;cn&#39;</span> --registry-mirror<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;https://9sznap3j.mirror.aliyuncs.com&#39;</span>
-</code></pre></div>
+</code></pre></div><p>启动：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>minikube dashboard
+</code></pre></div><h2 id=核心概念>核心概念</h2>
+<h3 id=pod>Pod</h3>
+<p>​ Pod 是 Kubernetes 的一个最小调度以及资源单元。用户可以通过 Kubernetes 的 Pod API 生产一个 Pod，让 Kubernetes 对这个 Pod 进行调度，也就是把它放在某一个 Kubernetes 管理的节点上运行起来。一个 Pod 简单来说是对一组容器的抽象，它里面会包含一个或多个容器。</p>
+<ul>
+<li>最小的调度以及资源单元</li>
+<li>由一个或者多个容器组成</li>
+<li>定义容器运行的方式（Command 、环境变量等）</li>
+<li>提供给容器共享的运行环境（网络、进程空间）</li>
+</ul>
+<hr>
+<h3 id=volume>Volume</h3>
+<p>​ Volume 就是卷的概念，它是用来管理 Kubernetes 存储的，是用来声明在 Pod 中的容器可以访问文件目录的，一个卷可以被挂载在 Pod 中一个或者多个容器的指定路径下面。</p>
+<ul>
+<li>声明在 Pod 中的容器可访问的文件目录</li>
+<li>可以被挂载在 Pod 中一个（或者多个）容器的指定路径下</li>
+<li>支持多种后端存储的抽象
+<ul>
+<li>本地、分布式、云存储</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id=deployment>Deployment</h3>
+<p>​ Deployment 是在 Pod 这个抽象上更为上层的一个抽象，它可以定义一组 Pod 的副本数目、以及这个 Pod 的版本。一般大家用 Deployment 这个抽象来做应用的真正的管理，而 Pod 是组成 Deployment 最小的单元。</p>
+<ul>
+<li>定义一组 Pod 的副本数目、版本等</li>
+<li>通过控制器（Controller）维持 Pod 的数目
+<ul>
+<li>自动恢复失败的 Pod</li>
+</ul>
+</li>
+<li>通过控制器以指定的策略控制版本
+<ul>
+<li>滚动升级、重新生成、回滚等</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id=service>Service</h3>
+<p>​ Service 提供了一个或者多个 Pod 实例的稳定访问地址。</p>
+<ul>
+<li>提供访问一个或者多个 Pod 实例的稳定访问地址</li>
+<li>支持多种访问方式时间
+<ul>
+<li>ClusterIP</li>
+<li>NodePort</li>
+<li>LoadBalancer</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id=namespace>Namespace</h3>
+<p>​ Namespace 是用来做一个集群内部的逻辑隔离的，它包括鉴权、资源管理等。Kubernetes 的每个资源，比如刚才讲的 Pod、Deployment、Service 都属于一个 Namespace，同一个 Namespace 中的资源需要命名的唯一性，不同的 Namespace 中的资源可以重名。</p>
+<ul>
+<li>一个集群内部的逻辑隔离机制（鉴权、资源额度）</li>
+<li>每个资源都属于一个 Namespace</li>
+<li>同一个 Namespace 中的资源命名唯一</li>
+<li>不同的 Namespace 中的资源可重名</li>
+</ul>
+<hr>
+<h2 id=参考>参考</h2>
+<p><a href=https://www.infoq.cn/article/knmavdo3jxs3qpkqtzbw>李响 从零开始入门 K8s: 详解 K8s 核心概念</a></p>
 </div>
 </div>
 </div>
