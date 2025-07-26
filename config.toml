@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://wawuyu.github.io"
+baseURL = "https://tyxsu.github.io"
 languageCode = "zh-CN"
 title = "唐叶"
 theme = "liva-hugo"
@@ -92,7 +92,7 @@ author = "唐叶"
 googleAnalitycsID = "Your ID"
 # Contact Information
 mobile = "0124857985320"
-email = "tyxscu@gmail.com"
+email = "tyxsc@proton"
 location = "BeiJing,China"
 toc = true
 # copyright
