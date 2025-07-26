@@ -91,7 +91,7 @@ author = "唐叶"
 # Google Analitycs
 googleAnalitycsID = "Your ID"
 # Contact Information
-#mobile = "0124857985320"
+mobile = "0124857985320"
 email = "tyxsc@proton.me"
 location = "China"
 toc = true
@@ -117,7 +117,7 @@ content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam non
 [[params.social]]
 title = "Telegram"
 icon = "ti-telegram" # themify icon : https://themify.me/themify-icons
-link = "https://t.me/"
+link = "#"
 
 #[[params.social]]
 #title = "twitter"
